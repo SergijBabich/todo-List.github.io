@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
+      <title></title>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <header>
+         <span>TODOList</span>
+      </header>
+      <div class="content">
+         <div class="content_set_Option">
+            <div class="content_set_Option_letInput">
+               <object type="image/svg+xml" data="img/search-solid.svg">
+               <img src="img/search-solid.svg" alt="image format png" />
+               </object>
+               <input type="text" name=""  class="set_option_letInput_inpSearch" placeholder="search by title" value="">
+            </div>
+            <select class="content_filter_state_task" >
+               <option value="All">All</option>
+               <option value="Open">Open</option>
+               <option value="Done">Done</option>
+            </select>
+            <select class="content_filter_state_level" >
+               <option value="All" >All</option>
+               <option value="High">High</option>
+               <option value="Normal">Normal</option>
+               <option value="Low">Low</option>
+            </select>
+            <button type="button"  class="bnt_create_list" id ="create_List" class="" name="button">Create</button>
+         </div>
+         <div class="content_contain">
+         </div>
+      </div>
+      <div class="overlay" id = "overlay">
+         <div class="content_create" id="contacts">
+            <div class="content_create_form_title">
+               Title
+            </div>
+            <form id="form" class="main_form">
+               <div class="content_create_form_input input">
+                  <input required type="text" maxlength="20"  id ="newName" class="form_name_input"  name="name" >
+               </div>
+               <span id="warningNameLength"></span>
+               <span>Description</span>
+               <div class="content_create_form_input textarea">
+                  <textarea name="name" maxlength="190"  rows="3" id ="newDick" class="form_description_input" cols="20"></textarea>
+               </div>
+               <span id="warning"></span>
+               <span>Priority</span>
+               <select class="form_priority_Input" id ="newPrior" >
+                  <option>High</option>
+                  <option>Normal</option>
+                  <option>Low</option>
+               </select>
+               <div class="content_create_form_new_card">
+                  <button type="submit" class="close_modal_window">Cancel</button>
+                  <button type="submit"  class="save_modal_rec">Save</button>
+               </div>
+            </form>
+         </div>
+      </div>
+      <footer>
+         <span>Babich Sergij</span>
+      </footer>
+      <script type="text/javascript" src="dist/js/bundle.js"></script>
+   </body>
+</html>

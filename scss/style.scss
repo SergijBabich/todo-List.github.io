@@ -1,0 +1,500 @@
+$bgColor: #fafafa;
+$maxWidth: 1170px;
+$Width: 100%;
+$hfFeight:50px;
+$Border: 2px solid #4163de;
+$BorderShadow: 0px 0px 10px #32f525;
+$BorderShadowHover: 0px 0px 10px #ece629;
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: $Width;
+	max-width: $maxWidth;
+	background-color: $bgColor;
+	margin: auto;
+}
+
+@mixin fontTitle {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 16px;
+}
+
+@mixin setContain {
+	width: $Width;
+	max-width: $maxWidth;
+	margin: auto;
+	display: flex;
+	border: $Border;
+}
+
+header,
+footer {
+	@include setContain;
+	height: $hfFeight;
+	align-items: center;
+	span {
+		margin-left: 20px;
+	}
+}
+
+.content {
+	@include setContain;
+	min-height: 900px;
+	height: auto;
+	background-color: #c1a9a96e;
+	flex-direction: column;
+}
+
+ ::placeholder {
+	color: white;
+}
+
+.set_option_letInput_inpSearch {
+	width: 170px;
+	@include fontTitle;
+	height: 30px;
+	border-radius: 10px;
+	text-align: center;
+	color: #32f525;
+	outline: none;
+	background-color: #262626;
+	border: none;
+	transition: .3s;
+	&:hover {
+		width: 270px;
+		color: black;
+		transition: .3s;
+		background-color: #fefefe;
+	}
+}
+
+.content_set_Option_letInput {
+	background-color: #262626;
+	svg {
+		color: antiquewhite;
+		&:hover {
+			box-shadow: $BorderShadowHover;
+			color: black;
+		}
+	}
+	object {
+		padding-left: 5px;
+		fill: #ff0000;
+		width: 20px;
+		height: 20px;
+		fill: #ffffff;
+	}
+	border: $Border;
+	border-radius: 20px;
+	transition: 0.3s;
+	width: 200px;
+	align-items: center;
+	display: flex;
+	&:hover {
+		width: 300px;
+		background-color: #fefefe;
+		transition: .3s;
+		border: 2px solid #d6d01c;
+	}
+	img {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.content_set_Option {
+	height: 170px;
+	width: $Width;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	border-bottom: $Border;
+	select {
+		width: 200px;
+		@include fontTitle;
+		border-radius: 10px;
+		background-color: inherit;
+		color: black;
+		text-align: right;
+		height: 30px;
+		border: $Border;
+		transition: 0.3s;
+		outline: none;
+		&:hover {
+			transition: 0.3s;
+			background-color: #fefefe;
+			box-shadow: $BorderShadowHover;
+			color: black;
+		}
+		option {
+			background-color: #262626;
+			border: $Border;
+			color: #fefefe;
+			border-radius: 10px;
+			outline: none;
+			margin: 2px;
+		}
+	}
+}
+
+.content_contain {
+	width: 100%;
+	max-width: 1170px;
+	display: flex;
+	height: auto;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.content_contain_items {
+	border-radius: 10px;
+	width: 310px;
+	height: 260px;
+	background-image: url(../img/sticky_note_PNG18889.png);
+	background-position: center;
+	background-size: cover;
+	justify-content: space-evenly;
+}
+
+.content_contain_items {
+	display: flex;
+	min-height: 350px;
+	height: auto;
+	@include fontTitle;
+	flex-direction: column;
+	align-items: stretch;
+	margin: 20px;
+	position: relative;
+	span {
+		color: #1c1f98;
+		height: 60px;
+		word-break: break-word;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.findRigth {
+		border-radius: 10px;
+		background-color: inherit;
+		color: black;
+		width: 100px;
+		height: 30px;
+		text-align: right;
+		height: 30px;
+		@include fontTitle;
+		border: $Border;
+		transition: 0.3s;
+		outline: none;
+		&:hover {
+			transition: 0.3s;
+			background-color: #fefefe;
+			box-shadow: $BorderShadowHover;
+			color: black;
+		}
+		option {
+			background-color: #262626;
+			border: $Border;
+			color: #fefefe;
+			border-radius: 10px;
+			outline: none;
+			margin: 2px;
+		}
+	}
+	.name_items {
+		font-size: 22px;
+		font-weight: 600;
+		display: flex;
+		margin-right: 4px;
+		align-items: flex-end;
+		margin-top: 25px;
+	}
+	.description_items {
+		min-height: 80px;
+		height: auto;
+	}
+	.content_contain_items_lowBar {
+		height: 55px;
+		width: auto;
+		display: inherit;
+		justify-content: space-around;
+		margin-bottom: 10px;
+	}
+	.content_contain_items_cardPriority {
+		border-style: dashed;
+		border: $Border;
+		height: 30px;
+		margin: 0px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		width: 80px;
+	}
+}
+
+.overlay {
+	position: fixed;
+	display: none;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 3;
+}
+
+.overlay1 {
+	position: fixed;
+	display: none;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 3;
+}
+
+.content_create {
+	width: 350px;
+	height: 400px;
+	@include fontTitle;
+	text-align: center;
+	border: $Border;
+	background-color: #e0e0e0;
+	display: flex;
+	margin: auto;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	z-index: 4;
+	left: 50%;
+	top: 150px;
+	transform: translateX(-50%);
+	.name_items {
+		margin-top: 5px;
+		height: 30px;
+		@include fontTitle;
+	}
+	.description_items {
+		margin-top: 50px;
+		word-break: break-word;
+		overflow-wrap: break-word;
+	}
+	.content_contain_items_lowBar {
+		height: 50px;
+		margin-top: 40px;
+		width: 300px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.content_contain_items_cardPriority {}
+	select {
+		width: 100px;
+		@include fontTitle;
+		border-radius: 10px;
+		background-color: inherit;
+		color: black;
+		text-align: right;
+		height: 30px;
+		border: $Border;
+		transition: 0.3s;
+		outline: none;
+		&:hover {
+			transition: 0.3s;
+			background-color: #fefefe;
+			color: black;
+		}
+		option {
+			background-color: #262626;
+			border: $Border;
+			color: #fefefe;
+			border-radius: 10px;
+			outline: none;
+			margin: 2px;
+		}
+	}
+}
+
+.setOption_letInput_Edit {
+	width: 180px;
+	height: 30px;
+	outline: none;
+	@include fontTitle;
+	border: $Border;
+	border-radius: 3px;
+}
+
+.bnt_create_list {
+	width: 62px;
+	height: 28px;
+	cursor: pointer;
+	outline: none;
+	background-color: #262626;
+	border: $Border;
+	border-radius: 10px;
+	transition: 0.3s;
+	color: #fefefe;
+	&:hover {
+		background-color: #fafafa;
+		width: 90px;
+		box-shadow: $BorderShadowHover;
+		transition: 0.3s;
+		color: black;
+	}
+}
+
+.bntSaveList {
+	width: 62px;
+	@include fontTitle;
+	height: 28px;
+	cursor: pointer;
+	background-color: white;
+	border: $Border;
+	border-radius: 3px;
+	&:hover {
+		background-color: #fafafa;
+	}
+}
+
+.content_contain_items_completed {
+	position: absolute;
+	width: 31px;
+	height: 27px;
+	left: 83%;
+	top: 34px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	cursor: pointer;
+	.content_contain_items_completed_img {
+		display: block;
+		margin-bottom: 5px;
+	}
+}
+
+.content_create_form_title {
+	height: 20px;
+	@include fontTitle;
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	span {
+		margin-top: 10px;
+		@include fontTitle;
+	}
+	input {
+		height: 30px;
+	}
+	input,
+	textarea {
+		width: 200px;
+		border: 1px solid black;
+		border-radius: 10px;
+		padding-left: 10px;
+		align-self: center;
+		outline: none;
+	}
+	.input {
+		height: 30px;
+		textarea {
+			resize: none;
+			width: 280px;
+			height: 80px;
+		}
+	}
+	select {
+		margin: auto;
+		margin-top: 10px;
+		@include fontTitle;
+	}
+	.form_description_input,
+	.form_name_input {
+		@include fontTitle;
+	}
+}
+
+.form_description_Edit {
+	resize: none;
+	width: 280px;
+	outline: none;
+	height: 80px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 16px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.content_create_form_new_card {
+	margin-top: 15px;
+	width: 300px;
+	display: flex;
+	justify-content: space-around;
+	button {
+		background-color: white;
+		border: 1px solid black;
+		width: 60px;
+		@include fontTitle;
+		height: 25px;
+		border-radius: 6px;
+		cursor: pointer;
+		transition: 0.3s;
+		&:hover {
+			background-color: #fafafa;
+			width: 90px;
+			transition: 0.3s;
+			color: black;
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.hide_filter_status {
+	display: none;
+}
+
+.hide_filter_Level {
+	display: none;
+}
+
+mark {
+	background-color: pink;
+}
+
+.textarea {
+	height: 60px;
+}
+
+#warning,
+#warningNameLength {
+	color: deeppink;
+	height: 30px;
+}
+
+@media screen and (max-width: 833px) {
+	.content_set_Option {
+		height: 230px;
+		flex-wrap: wrap;
+	}
+	.content_contain {
+		justify-content: space-around;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.content_set_Option {
+		height: 250px;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+}
